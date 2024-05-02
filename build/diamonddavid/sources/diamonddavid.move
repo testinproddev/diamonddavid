@@ -1,6 +1,6 @@
 
 /// Module: diamonddavid
-module diamonddavid::diamondd {
+module diamonddavid::diamonddavid {
 
     use sui::coin::{Self, Coin, TreasuryCap};
     /* use std::option;
@@ -12,17 +12,17 @@ module diamonddavid::diamondd {
     /// The type identifier of coin. The coin will have a type
     /// tag of kind: `Coin<package_object::mycoin::MYCOIN>`
     /// Make sure that the name of the type matches the module's name.
-    public struct DIAMONDD has drop {}
+    public struct DIAMONDDAVID has drop {}
 
     /// Module initializer is called once on module publish. A treasury
     /// cap is sent to the publisher, who then controls minting and burning
-    fun init(witness: DIAMONDD, ctx: &mut TxContext) {
+    fun init(witness: DIAMONDDAVID, ctx: &mut TxContext) {
         let (treasury, metadata) = coin::create_currency(
             witness,
             0,
             b"diams",
-            b"",
-            b"",
+            b"diamondavid",
+            b"scarce precious resource of sui",
             option::none(),
             ctx
         );
@@ -32,7 +32,7 @@ module diamonddavid::diamondd {
     
    
 /*     public entry fun update_icon_url(
-        _treasury: &coin::TreasuryCap<GOLDENDAVID>, 
+        _treasury: &coin::TreasuryCap<DIAMONDDAVID>, 
         metadata: &mut coin::CoinMetadata<GOLDENDAVID>, 
         url: ascii::String
         ){
@@ -40,7 +40,7 @@ module diamonddavid::diamondd {
     } */
 
     public fun mint(
-    treasury_cap: &mut TreasuryCap<DIAMONDD>, 
+    treasury_cap: &mut TreasuryCap<DIAMONDDAVID>, 
     amount: u64, 
     recipient: address, 
     ctx: &mut TxContext,
