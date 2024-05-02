@@ -1,0 +1,2 @@
+# diamonddavid
+sui coin
